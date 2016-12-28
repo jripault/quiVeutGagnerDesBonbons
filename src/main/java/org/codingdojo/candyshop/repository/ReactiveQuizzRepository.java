@@ -8,6 +8,6 @@ import reactor.core.publisher.Mono;
  * User: JRI <julien.ripault@atos.net>
  * Date: 22/12/2016
  */
-public interface ReactiveQuizzRepository extends ReactiveCrudRepository<Quizz, Long> {
+public interface ReactiveQuizzRepository extends ReactiveCrudRepository<Quizz, String> {
     Mono<Quizz> findByName(String name);
 }

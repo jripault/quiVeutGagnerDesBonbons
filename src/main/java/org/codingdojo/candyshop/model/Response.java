@@ -1,16 +1,37 @@
 package org.codingdojo.candyshop.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import java.time.LocalDateTime;
 
 /**
  * User: JRI <julien.ripault@atos.net>
  * Date: 22/12/2016
  */
-@Document
 public class Response {
+    private int questionNumber;
+    private int answerNumber;
+    private LocalDateTime time;
 
-    @Id
-    private Long id;
-    private Answer answer;
+    public int getQuestionNumber() {
+        return questionNumber;
+    }
+
+    public void setQuestionNumber(int questionNumber) {
+        this.questionNumber = questionNumber;
+    }
+
+    public int getAnswerNumber() {
+        return answerNumber;
+    }
+
+    public void setAnswerNumber(int answerNumber) {
+        this.answerNumber = answerNumber;
+    }
+
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
+    }
 }

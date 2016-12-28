@@ -22,13 +22,13 @@ public class QuizzController {
         this.repository = repository;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public Flux<Quizz> getQuizzes(){
         return repository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Mono<Quizz> getQuizz(@PathVariable Long id){
+    public Mono<Quizz> getQuizz(@PathVariable String id){
         return repository.findOne(id);
     }
 }
