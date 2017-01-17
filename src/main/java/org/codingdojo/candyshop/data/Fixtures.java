@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * User: JRI <julien.ripault@atos.net>
@@ -50,6 +52,9 @@ public class Fixtures {
 
 
         QuizzInstance quizzInstance = QuizzInstanceBuilder.aQuizzInstance().quizz(quizz).players(players).questions(questionInstances).build();
+
+        Response response = ResponseBuilder.aResponse().questionNumber(1).answerNumber(2).time(now.plusSeconds(5)).build();
+        ju.setResponses(Stream.of(response).collect(Collectors.toList()));
 
         quizzInstanceRepository.save(quizzInstance).subscribe();
     }
