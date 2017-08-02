@@ -1,4 +1,4 @@
-package org.codingdojo;
+package org.codingdojo.candyshop;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

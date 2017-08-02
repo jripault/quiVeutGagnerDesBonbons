@@ -23,6 +23,6 @@ public class ResponseController {
 
     @PostMapping("/user/{userId}")
     public Mono<Quizz> addResponse(@PathVariable String userId){
-        return repository.findOne(userId);
+        return repository.findById(userId);
     }
 }

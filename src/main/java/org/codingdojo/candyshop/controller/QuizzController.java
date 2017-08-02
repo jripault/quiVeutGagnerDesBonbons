@@ -29,6 +29,6 @@ public class QuizzController {
 
     @GetMapping("/{id}")
     public Mono<Quizz> getQuizz(@PathVariable String id){
-        return repository.findOne(id);
+        return repository.findById(id);
     }
 }
